@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <include layout="@layout/title_bar"></include>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/station_edit_import"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="5dp"
+            android:maxLength="6"
+            android:hint="@string/network_station"
+            android:paddingLeft="55dp"
+            android:paddingRight="60dp">
+        </EditText>
+
+        <ImageView
+            android:layout_width="@dimen/dp33"
+            android:layout_height="@dimen/dp32"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="@dimen/dp4"
+            android:background="@mipmap/network_station"
+            android:visibility="visible"/>
+
+
+        <Button
+            android:id="@+id/station_search_import"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/station_search"
+            />
+    </FrameLayout>
+<ListView
+    android:id="@+id/import_listview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+</LinearLayout>

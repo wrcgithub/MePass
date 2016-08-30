@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyLive</string>
+    <string name="main_cancel">取消</string>
+    <string name="main_confirm">登录</string>
+    <string name="main_account_text">账户：</string>
+    <string name="main_account_edit">请输入登录账号...</string>
+    <string name="main_pass_edit">请输入密码...</string>
+    <string name="main_forget_pass">忘记密码???</string>
+    <string name="network_station">输入站点名称并搜索！</string>
+</resources>
