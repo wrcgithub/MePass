@@ -17,10 +17,11 @@ import com.pass.wrc.com.mepass.base.BaseApplication;
 import com.pass.wrc.com.mepass.commons.Common;
 import com.pass.wrc.com.mepass.utils.SharePreTool;
 import com.pass.wrc.com.mepass.utils.SwitchActivity;
+import com.pass.wrc.com.mepass.view.SlidingMenu;
 
 
 public class MainActivity extends BaseActivity {
-
+    private SlidingMenu mMenu;
     private Button confirmBtn;
     private Button clearAccountBtn, clearPassBtn, eyePasssBtn;
     private TextView cancelText, forgetText;
@@ -38,6 +39,7 @@ public class MainActivity extends BaseActivity {
         initView();
         setHintTextSize(accountEdit, "请输入账号...", 14);
         setHintTextSize(passEdit, "请输入密码...", 14);
+        mMenu = (SlidingMenu) findViewById(R.id.id_menu);
     }
 
 
