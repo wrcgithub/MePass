@@ -1,10 +1,12 @@
 package com.pass.wrc.com.mepass.adapter;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.pass.wrc.com.mepass.R;
@@ -84,10 +86,18 @@ public class QuerAdapter extends BaseAdapter {
             viewHolder.nickName = (TextView) convertView.findViewById(R.id.nick_name);
             viewHolder.emailName = (TextView) convertView.findViewById(R.id.email_name);
             viewHolder.passWord = (TextView) convertView.findViewById(R.id.pass_word);
+            viewHolder.nickLinear = (LinearLayout) convertView.findViewById(R.id.nick_name_layout);
+            viewHolder.emailLinear = (LinearLayout) convertView.findViewById(R.id.email_name_layout);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
 
+        }
+        if (TextUtils.isEmpty(data.get(position).getNickName())){
+            viewHolder.nickLinear.setVisibility(View.GONE);
+        }
+        if (TextUtils.isEmpty(data.get(position).getEmail())){
+            viewHolder.emailLinear.setVisibility(View.GONE);
         }
         viewHolder.netName.setText(data.get(position).getWebName());
         viewHolder.nickName.setText(data.get(position).getNickName());
@@ -102,6 +112,6 @@ public class QuerAdapter extends BaseAdapter {
     private class ViewHolder {
 
         public TextView netName, nickName, emailName, passWord;
-
+    public LinearLayout nickLinear,emailLinear;
     }
 }

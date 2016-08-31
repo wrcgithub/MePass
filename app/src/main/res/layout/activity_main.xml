@@ -1,188 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.pass.wrc.com.mepass.view.SlidingMenu
+    android:id="@+id/id_menu"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activity.MainActivity">
-
-    <include layout="@layout/title_bar"></include>
+    xmlns:wrc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    wrc:rightPadding="100dp">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp40"
-        android:layout_marginTop="@dimen/dp10"
-        android:visibility="gone"
-        >
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/main_account_text"
-            android:layout_width="@dimen/dp80"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dp40"
-            android:gravity="center"
-            android:text="@string/main_account_text"
-            android:textSize="@dimen/sp20"
-            />
+        <include layout="@layout/layout_menu"/>
 
-        <EditText
-            android:id="@+id/main_account"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dp10"
-            android:background="@null"
-            android:hint="@string/main_account_edit"
-            />
+            android:orientation="vertical"
+            >
+
+            <include layout="@layout/title_bar"></include>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp10"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/main_account_text"
+                    android:layout_width="@dimen/dp80"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp40"
+                    android:gravity="center"
+                    android:text="@string/main_account_text"
+                    android:textSize="@dimen/sp20"
+                    />
+
+                <EditText
+                    android:id="@+id/main_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:background="@null"
+                    android:hint="@string/main_account_edit"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:id="@+id/username_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginTop="5dp"
+                        android:hint="@string/main_account_edit"
+                        android:maxLength="6"
+                        android:paddingLeft="55dp"
+                        android:paddingRight="60dp">
+                    </EditText>
+
+                    <ImageView
+                        android:layout_width="@dimen/dp33"
+                        android:layout_height="@dimen/dp32"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="@dimen/dp4"
+                        android:background="@mipmap/login_usr_in_img"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:id="@+id/contry_sn"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="+62"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:visibility="invisible"/>
+
+                    <Button
+                        android:id="@+id/bt_username_clear"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/button_clear"
+                        android:visibility="invisible"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/usercode_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username_layout"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dp50"
+                        android:hint="@string/main_pass_edit"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:paddingLeft="55dp"
+                        android:paddingRight="60dp">
+                    </EditText>
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="@dimen/dp4"
+                        android:background="@mipmap/login_code_in_img"/>
+
+                    <Button
+                        android:id="@+id/bt_pwd_eye"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="@dimen/dp35"
+                        android:background="@mipmap/button_eye_n"
+                        />
+
+                    <Button
+                        android:id="@+id/bt_pwd_clear"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:background="@mipmap/button_clear"
+                        android:visibility="invisible"
+                        />
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginTop="@dimen/dp20"
+                >
+
+
+                <Button
+                    android:id="@+id/main_confirm"
+                    style="@style/buttonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/dp40"
+                    android:text="@string/main_confirm"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp35"
+                android:layout_marginTop="@dimen/dp10"
+                >
+
+                <TextView
+                    android:id="@+id/main_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:gravity="center"
+                    android:text="@string/main_cancel"
+                    />
+
+                <TextView
+                    android:id="@+id/main_forget_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:gravity="center"
+                    android:text="@string/main_forget_pass"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/login_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp20"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:gravity="center">
-
-        <FrameLayout
-            android:id="@+id/username_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="55dp"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/username"
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/dp50"
-                android:layout_marginTop="5dp"
-                android:maxLength="6"
-                android:hint="@string/main_account_edit"
-                android:paddingLeft="55dp"
-                android:paddingRight="60dp">
-            </EditText>
-
-            <ImageView
-                android:layout_width="@dimen/dp33"
-                android:layout_height="@dimen/dp32"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginLeft="@dimen/dp4"
-                android:background="@mipmap/login_usr_in_img"
-                android:visibility="visible"/>
-
-            <TextView
-                android:id="@+id/contry_sn"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginTop="4dp"
-                android:gravity="center"
-                android:text="+62"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:visibility="invisible"/>
-
-            <Button
-                android:id="@+id/bt_username_clear"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginRight="10dp"
-                android:background="@mipmap/button_clear"
-                android:visibility="visible"
-                />
-        </FrameLayout>
-
-        <FrameLayout
-            android:id="@+id/usercode_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/username_layout"
-            android:layout_marginTop="6dp"
-            android:gravity="center">
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/dp50"
-                android:inputType="textPassword"
-                android:maxLength="20"
-                android:hint="@string/main_pass_edit"
-                android:paddingLeft="55dp"
-                android:paddingRight="60dp">
-            </EditText>
-
-            <ImageView
-                android:layout_width="34dp"
-                android:layout_height="32dp"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginLeft="@dimen/dp4"
-                android:background="@mipmap/login_code_in_img"/>
-
-            <Button
-                android:id="@+id/bt_pwd_eye"
-                android:layout_width="@dimen/dp30"
-                android:layout_height="@dimen/dp30"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginRight="@dimen/dp35"
-                android:background="@mipmap/button_eye_n"
-                />
-
-            <Button
-                android:id="@+id/bt_pwd_clear"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginRight="10dp"
-                android:background="@mipmap/button_clear"
-                android:visibility="visible"
-                />
-        </FrameLayout>
-
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp45"
-        android:layout_marginTop="@dimen/dp20"
-        >
-
-
-        <Button
-            android:id="@+id/main_confirm"
-            style="@style/buttonStyle"
-            android:layout_centerInParent="true"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginRight="@dimen/dp40"
-            android:text="@string/main_confirm"
-            />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp35"
-        android:layout_marginTop="@dimen/dp10"
-        >
-
-        <TextView
-            android:id="@+id/main_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginLeft="@dimen/dp20"
-            android:text="@string/main_cancel"
-            />
-
-        <TextView
-            android:id="@+id/main_forget_pass"
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/dp20"
-            android:text="@string/main_forget_pass"
-            />
-    </RelativeLayout>
-
-</LinearLayout>
+</com.pass.wrc.com.mepass.view.SlidingMenu>

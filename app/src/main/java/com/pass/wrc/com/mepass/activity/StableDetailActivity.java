@@ -3,6 +3,7 @@ package com.pass.wrc.com.mepass.activity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.pass.wrc.com.mepass.R;
@@ -18,7 +19,7 @@ public class StableDetailActivity extends BaseActivity {
 
     private String type = "";
     private TextView netNameText, netSiteText, accountText, nickNameText, emailText, secretCodeText, secretSecurityText, creatTimeText;
-
+    private LinearLayout  netSiteLayoutText, accountLayoutText, nickNameLayoutText, emailLayoutText, secretCodeLayoutText, secretSecurityLayoutText, creatTimeLayoutText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,36 +52,42 @@ public class StableDetailActivity extends BaseActivity {
         secretSecurityText = (TextView) findViewById(R.id.pass_security_detail);
         creatTimeText = (TextView) findViewById(R.id.creat_time_detail);
 
-
+        netSiteLayoutText = (LinearLayout) findViewById(R.id.layout_net_site_detail);
+        accountLayoutText = (LinearLayout) findViewById(R.id.layout_account_detail);
+        nickNameLayoutText = (LinearLayout) findViewById(R.id.layout_nick_name_detail);
+        emailLayoutText = (LinearLayout) findViewById(R.id.layout_email_name_detail);
+        secretCodeLayoutText = (LinearLayout) findViewById(R.id.layout_pass_word_detail);
+        secretSecurityLayoutText = (LinearLayout) findViewById(R.id.layout_pass_security_detail);
+        creatTimeLayoutText = (LinearLayout) findViewById(R.id.layout_creat_time_detail);
     }
     private void isGson(){
         if (type.equals(Common.SNAP)) {
-        creatTimeText.setVisibility(View.VISIBLE);
+        creatTimeLayoutText.setVisibility(View.VISIBLE);
             creatTimeText.setText(webModel.getCreateTime());
         }
         netNameText.setText(webModel.getWebName());
         if (!TextUtils.isEmpty(webModel.getWebSite())){
-            netSiteText.setVisibility(View.VISIBLE);
+            netSiteLayoutText.setVisibility(View.VISIBLE);
             netSiteText.setText(webModel.getWebSite());
         }
         if (!TextUtils.isEmpty(webModel.getAccount())){
-            accountText.setVisibility(View.VISIBLE);
+            accountLayoutText.setVisibility(View.VISIBLE);
             accountText.setText(webModel.getAccount());
         }
         if (!TextUtils.isEmpty(webModel.getNickName())){
-            nickNameText.setVisibility(View.VISIBLE);
+            nickNameLayoutText.setVisibility(View.VISIBLE);
             nickNameText.setText(webModel.getNickName());
         }
         if (!TextUtils.isEmpty(webModel.getEmail())){
-            emailText.setVisibility(View.VISIBLE);
+            emailLayoutText.setVisibility(View.VISIBLE);
             emailText.setText(webModel.getEmail());
         }
         if (!TextUtils.isEmpty(webModel.getSecretCode())){
-            secretCodeText.setVisibility(View.VISIBLE);
+            secretCodeLayoutText.setVisibility(View.VISIBLE);
             secretCodeText.setText(webModel.getSecretCode());
         }
         if (!TextUtils.isEmpty(webModel.getSecretSecurity())){
-            secretSecurityText.setVisibility(View.VISIBLE);
+            secretSecurityLayoutText.setVisibility(View.VISIBLE);
             secretSecurityText.setText(webModel.getSecretSecurity());
         }
 

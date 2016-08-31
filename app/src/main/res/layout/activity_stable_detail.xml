@@ -24,9 +24,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_account_detail"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/dp20"
         android:layout_marginRight="@dimen/dp20"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp30">
         <TextView
@@ -47,9 +49,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_nick_name_detail"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/dp20"
         android:layout_marginRight="@dimen/dp20"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp30">
         <TextView
@@ -70,9 +74,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_email_name_detail"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/dp20"
         android:layout_marginRight="@dimen/dp20"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp30">
         <TextView
@@ -93,9 +99,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_pass_word_detail"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/dp20"
         android:layout_marginRight="@dimen/dp20"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp30">
         <TextView
@@ -116,9 +124,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_net_site_detail"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/dp20"
         android:layout_marginRight="@dimen/dp20"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp30">
         <TextView
@@ -139,9 +149,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_creat_time_detail"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/dp20"
         android:layout_marginRight="@dimen/dp20"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp30">
         <TextView
@@ -162,9 +174,11 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/layout_pass_security_detail"
         android:orientation="horizontal"
         android:layout_marginLeft="@dimen/dp20"
         android:layout_marginRight="@dimen/dp20"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp30">
         <TextView

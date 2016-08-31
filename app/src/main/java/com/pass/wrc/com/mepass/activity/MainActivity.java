@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -73,7 +74,28 @@ public class MainActivity extends BaseActivity {
 
         accountEdit = (EditText) findViewById(R.id.username);
         passEdit = (EditText) findViewById(R.id.password);
+        accountEdit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
 
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus){//获得焦点
+                    clearAccountBtn.setVisibility(View.VISIBLE);
+                }else{//失去焦点
+                    clearAccountBtn.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        passEdit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus){//获得焦点
+                    clearPassBtn.setVisibility(View.VISIBLE);
+                }else{//失去焦点
+                    clearPassBtn.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
     }
 
 
