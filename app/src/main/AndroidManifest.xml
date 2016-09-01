@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".activity.MainMenuActivity"/>
         <activity android:name=".activity.QuerStableActivity"/>
         <activity android:name=".activity.QuerSnapActivity"/>
         <activity android:name=".activity.StableDetailActivity"/>

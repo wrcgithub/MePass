@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@mipmap/backsliding" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1A7DEB"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:orientation="vertical" >
+        android:background="@mipmap/backsliding"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/one"
@@ -21,7 +28,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@mipmap/station_search" />
+                android:src="@mipmap/station_search"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -31,12 +38,12 @@
                 android:layout_toRightOf="@id/one"
                 android:text="第1个Item"
                 android:textColor="#f0f0f0"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/two"
@@ -45,7 +52,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@mipmap/station_search" />
+                android:src="@mipmap/station_search"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -55,12 +62,12 @@
                 android:layout_toRightOf="@id/two"
                 android:text="第2个Item"
                 android:textColor="#f0f0f0"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/three"
@@ -69,7 +76,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@mipmap/station_search" />
+                android:src="@mipmap/station_search"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -79,12 +86,12 @@
                 android:layout_toRightOf="@id/three"
                 android:text="第3个Item"
                 android:textColor="#f0f0f0"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/four"
@@ -93,7 +100,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@mipmap/station_search" />
+                android:src="@mipmap/station_search"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -103,12 +110,13 @@
                 android:layout_toRightOf="@id/four"
                 android:text="第一个Item"
                 android:textColor="#f0f0f0"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/kill_app"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/five"
@@ -117,7 +125,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@mipmap/station_search" />
+                android:src="@mipmap/kill_app"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -125,10 +133,10 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/five"
-                android:text="第5个Item"
+                android:text="退出"
                 android:textColor="#f0f0f0"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
         </RelativeLayout>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
